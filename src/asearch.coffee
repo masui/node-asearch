@@ -1,7 +1,7 @@
 class Asearch
 
   INITPAT = 0x80000000
-  MAXCHAR = 0x100
+  MAXCHAR = 0x10000
   INITSTATE = [INITPAT, 0, 0, 0]
 
   isupper: (c) ->
@@ -60,8 +60,7 @@ class Asearch
     bytes = []
     for c in str.split('')
       code = c.charCodeAt(0)
-      bytes.push((code & 0xFF00) >>> 8) if code > 0xFF
-      bytes.push(code & 0xFF)
+      bytes.push(code)
     return bytes
 
 

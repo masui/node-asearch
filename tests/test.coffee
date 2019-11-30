@@ -86,18 +86,30 @@ describe 'pattern "漢字文字列"', ->
   it 'should match "漢字文字列"', ->
     assert.equal a.match('漢字文字列'), true
 
+  it 'should not match "漢字の文字列"', ->
+    assert.equal a.match('漢字の文字列'), false
+
+  it 'should match "漢字の文字列"', ->
+    assert.equal a.match('漢字の文字列',1), true
+
   it 'should not match "漢字文字"', ->
     assert.equal a.match('漢字文字'), false
 
-  it 'should match ("漢字文字",2)', ->
-    assert.equal a.match('漢字文字',2), true
+  it 'should match ("漢字文字",1)', ->
+    assert.equal a.match('漢字文字',1), true
 
   it 'should not match "漢字文字烈"', ->
     assert.equal a.match("漢字文字烈"), false
 
-  it 'should match ("漢字文字烈",2)', ->
-    assert.equal a.match("漢字文字烈",2), true
+  it 'should match ("漢字文字烈",1)', ->
+    assert.equal a.match("漢字文字烈",1), true
+
+  it 'should not match ("漢和辞典",1)', ->
+    assert.equal a.match("漢和辞典",1), false
 
   it 'should not match ("漢和辞典",2)', ->
     assert.equal a.match("漢和辞典",2), false
+
+  it 'should match ("漢文列",2)', ->
+    assert.equal a.match("漢文列",2), true
 
