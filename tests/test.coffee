@@ -89,7 +89,7 @@ describe 'pattern "漢字文字列"', ->
   it 'should not match "漢字の文字列"', ->
     assert.equal a.match('漢字の文字列'), false
 
-  it 'should match "漢字の文字列"', ->
+  it 'should match ("漢字の文字列",1)', ->
     assert.equal a.match('漢字の文字列',1), true
 
   it 'should not match "漢字文字"', ->
