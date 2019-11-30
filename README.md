@@ -1,5 +1,5 @@
 # Node Asearch
-ambiguity text search for JavaScript
+Approximate pattern matching on JavaScript
 
 [![Build Status](https://travis-ci.org/shokai/node-asearch.png?branch=master)](https://travis-ci.org/shokai/node-asearch)
 
