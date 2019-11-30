@@ -12,7 +12,7 @@
   "license": "BSD-2-Clause",
   "devDependencies": {
     "coffee-errors": "*",
-    "coffee-script": "^1.10.0",
+    "coffee-script": "^1.12.7",
     "grunt": "*",
     "grunt-coffeelint": "*",
     "grunt-contrib-coffee": "*",

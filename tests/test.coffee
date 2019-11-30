@@ -113,3 +113,15 @@ describe 'pattern "漢字文字列"', ->
   it 'should match ("漢文列",2)', ->
     assert.equal a.match("漢文列",2), true
 
+describe 'pattern "増井"', ->
+
+  a = new Asearch '増井'
+
+  it 'should not match ("売上金",0)', ->
+    assert.equal a.match("売上金",0), false
+
+  it 'should not match ("売上金",1)', ->
+    assert.equal a.match("売上金",1), false
+
+  it 'should not match ("売上金",2)', ->
+    assert.equal a.match("売上金",2), false
