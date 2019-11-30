@@ -48,7 +48,7 @@ a = new Asearch '漢字文字列'
 
 console.log a.match '漢字文字列' # => true
 console.log a.match '漢字文字烈' # => false
-console.log a.match '漢字文字烈', 2 # => true
+console.log a.match '漢字文字烈', 1 # => true
 ```
 
 ### for browser
